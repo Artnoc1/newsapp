@@ -28,11 +28,15 @@
     "nodemon": "^1.19.2",
     "postcss": "^7.0.18",
     "raw-loader": "^3.1.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "snyk": "^1.362.1"
   },
   "scripts": {
     "build": "webpack",
     "start": "node main.js",
-    "dev": "nodemon main.js"
-  }
+    "dev": "nodemon main.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true
 }
